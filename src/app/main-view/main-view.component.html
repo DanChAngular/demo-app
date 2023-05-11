@@ -1,0 +1,41 @@
+<div id="pageContent" *ngIf="isUserSignedIn">
+  <div id="infoPanel">
+    <div id="paymentBox">
+      <div id="purchaseInfo">
+        <div id="money"><b>&euro; 50.00</b></div>
+        <div id="cashIn"><b>Cash in voucher</b></div>
+        <div id="valid">Valid for: <b>24 hours</b></div>
+        <div id="mail">
+          <i>
+            You will receive your QR code in the next step and will be also
+            e-mailed to <b>josef@gmail.com!</b></i
+          >
+        </div>
+        <button type="button" id="purchaseBtn" (click)="onBtnClick()">
+          <b>PURCHASE VOUCHER</b>
+        </button>
+      </div>
+    </div>
+    <div id="furtherInfo">
+      For further information please check the <br />
+      <a style="text-decoration: none" href="url">guide on Cashin vouchers</a>
+    </div>
+    <div id="location"><b>Find a location</b></div>
+    <table>
+      <tr>
+        <th>Name & address</th>
+        <th>Opening hours</th>
+      </tr>
+      <tr *ngFor="let venue of venues">
+        <td>
+          <b>{{ venue.name }}</b
+          ><br />
+          {{ venue.city }} <br />
+          {{ venue.telephone }} <br />
+          <a href="url">View location on map</a>
+        </td>
+        <td>{{ venue.hours }}</td>
+      </tr>
+    </table>
+  </div>
+</div>

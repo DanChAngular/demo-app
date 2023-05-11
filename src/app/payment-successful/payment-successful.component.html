@@ -1,0 +1,22 @@
+<div id="pageContent">
+  <div id="infoPanel">
+    <div id="voucherPanel">
+      <div id="voucherText"><b>Voucher purchased</b></div>
+      <div id="email">
+        An e-mail with instructions and QR code below is sent to you to:
+        <b>josef@gmail.com</b>
+      </div>
+    </div>
+    <div id="paymentBox">
+      <div id="purchaseInfo">
+        <div id="money"><b>&euro; 50.00</b></div>
+        <div id="cashIn"><b>Cash in voucher</b></div>
+        <div id="expiration">Expires in:</div>
+        <div id="qrcode">
+          <qrcode [qrdata]="qrCode" [width]="230"></qrcode>
+        </div>
+        <div id="voucherManagment"><b>Voucher managment</b></div>
+      </div>
+    </div>
+  </div>
+</div>
